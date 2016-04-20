@@ -82,6 +82,8 @@ void parse_file ( char * filename,
   struct matrix * tmp;
   double angle;
   color g;
+  struct stack *stax;
+  stax = new_stack();
 
   g.red = 0;
   g.green = 255;
@@ -98,8 +100,6 @@ void parse_file ( char * filename,
     line[strlen(line)-1]='\0';
     //printf(":%s:\n",line);
     double x, y, z, x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4;
-   
-    
     if ( strncmp(line, "line", strlen(line)) == 0 ) {
       //      printf("LINE!\n");
       fgets(line, 255, f);
@@ -201,6 +201,12 @@ void parse_file ( char * filename,
       //      print_matrix(pm);
       matrix_mult(transform, pm);
     }
+    else if (strncmp (line, "push", strlen(line)) == 0) {
+      push(stax);
+    }
+    /*else if (strncmp (line, "pop", strlen(line)) == 0) {
+      pop(stax);
+      }*/
     else if ( strncmp(line, "display", strlen(line)) == 0 ) {
       clear_screen(s);
       draw_polygons(pm, s, g);

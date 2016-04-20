@@ -37,7 +37,7 @@ struct stack * new_stack() {
   Returns: 
 
   Puts a new matrix on top of s
-  The new matrix should be a copy of the curent
+  The new matrix should be a copy of the current
   top matrix
   
   04/19/12 11:29:04

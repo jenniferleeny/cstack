@@ -18,7 +18,7 @@ dsiplay.o: display.c display.h ml6.h matrix.h
 matrix.o: matrix.c matrix.h
 	$(CC) $(CFLAGS) -c matrix.c
 
-parser.o: parser.c parser.h matrix.h draw.h display.h ml6.h
+parser.o: parser.c parser.h matrix.h draw.h display.h stack.h ml6.h 
 	$(CC) $(CFLAGS) -c parser.c
 
 gmath.o: gmath.c gmath.h matrix.h
