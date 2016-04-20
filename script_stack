@@ -1,0 +1,48 @@
+push
+translate
+275 350 0
+xrotate
+20
+yrotate
+30
+box
+0 0 0 150 150 100
+push
+translate
+75 50 0
+sphere
+0 0 50
+push
+translate
+75 -50 0
+box
+0 0 0 80 50 50
+push
+translate
+-220 0 0
+box
+0 0 0 80 50 50
+push
+translate
+100 -145 0
+box
+0 0 0 50 80 50
+push
+translate
+50 -15 -70
+box
+0 0 0 50 50 100
+push
+translate
+-50 -50 0
+sphere
+0 0 35
+push
+translate
+-50 -50 0
+torus
+0 0 10 50
+display
+save
+image.png
+quit
